@@ -13,12 +13,13 @@ class DoubanspiderSpider(scrapy.Spider):
 
     def parse(self, response):
         #第三个参数是步长
-        for count in range(0, 100, 20):
+        for count in range(0, 20, 20):
             fir_url = 'https://movie.douban.com/j/new_search_subjects?sort=T&range=0,10&tags=&start={}'.format(count)
             yield scrapy.Request(fir_url, callback=self.parse_main)
 
     def parse_main(self, response):
         datas = json.loads(response.text)['data']
+        # yield scrapy.Request(url, callback=self.parse_detail)
         for data in datas:
             try:
                 url = data['url']  # 详情url
