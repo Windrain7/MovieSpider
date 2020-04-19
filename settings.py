@@ -53,7 +53,7 @@ DEFAULT_REQUEST_HEADERS = {
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-RANDOM_UA_TYPE= 'random'
+RANDOM_UA_TYPE = 'random'
 DOWNLOADER_MIDDLEWARES = {
     # 'MovieSpider.middlewares.RandomUserAgentMiddleware': 543,
     'MovieSpider.middlewares.MoviespiderDownloaderMiddleware': 543,

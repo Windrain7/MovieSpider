@@ -16,7 +16,7 @@ class MovieItem(scrapy.Item):
     screenwriters = scrapy.Field()
     actors = scrapy.Field()
     category = scrapy.Field()
-    region = scrapy.Field
+    region = scrapy.Field()
     date = scrapy.Field()
     runtime = scrapy.Field()
     rate = scrapy.Field()
